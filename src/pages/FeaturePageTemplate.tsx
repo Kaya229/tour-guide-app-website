@@ -1,9 +1,37 @@
 import { Link } from 'react-router-dom';
+import {
+    Camera, Zap, BookOpen, Search, Volume2, Eye,
+    MessageSquare, Bot, Landmark, Languages, Map,
+    Mic2, Globe, Headphones, PauseCircle, Brain,
+    Lightbulb, RefreshCw, MapPin, type LucideProps
+} from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useLanguage } from '../context/LanguageContext';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import './FeaturePage.css';
+
+const iconMap: Record<string, React.ComponentType<LucideProps>> = {
+    'camera': Camera,
+    'zap': Zap,
+    'book-open': BookOpen,
+    'search': Search,
+    'volume-2': Volume2,
+    'eye': Eye,
+    'message-square': MessageSquare,
+    'bot': Bot,
+    'landmark': Landmark,
+    'languages': Languages,
+    'map': Map,
+    'mic-2': Mic2,
+    'globe': Globe,
+    'headphones': Headphones,
+    'pause-circle': PauseCircle,
+    'brain': Brain,
+    'lightbulb': Lightbulb,
+    'refresh-cw': RefreshCw,
+    'map-pin': MapPin,
+};
 
 interface Step {
     icon: string;
@@ -68,15 +96,20 @@ function FeaturePageTemplate({ image, data }: FeaturePageTemplateProps) {
                         <div className="reveal stagger-2">
                             <span className="feature-section-label">{data.howTitle}</span>
                             <div className="feature-steps">
-                                {data.steps.map((step, i) => (
-                                    <div className="feature-step" key={i}>
-                                        <span className="feature-step-icon">{step.icon}</span>
-                                        <div>
-                                            <p className="feature-step-title">{step.title}</p>
-                                            <p className="feature-step-desc">{step.desc}</p>
+                                {data.steps.map((step, i) => {
+                                    const IconComponent = iconMap[step.icon];
+                                    return (
+                                        <div className="feature-step" key={i}>
+                                            <span className="feature-step-icon">
+                                                {IconComponent && <IconComponent size={22} strokeWidth={1.75} />}
+                                            </span>
+                                            <div>
+                                                <p className="feature-step-title">{step.title}</p>
+                                                <p className="feature-step-desc">{step.desc}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
@@ -90,13 +123,18 @@ function FeaturePageTemplate({ image, data }: FeaturePageTemplateProps) {
                             <h2 className="feature-section-heading">{data.benefitsTitle}</h2>
                         </div>
                         <div className="feature-benefits-grid">
-                            {data.benefits.map((benefit, i) => (
-                                <div className={`feature-benefit-card reveal stagger-${(i % 4) + 1}`} key={i}>
-                                    <span className="feature-benefit-icon">{benefit.icon}</span>
-                                    <h3 className="feature-benefit-title">{benefit.title}</h3>
-                                    <p className="feature-benefit-desc">{benefit.desc}</p>
-                                </div>
-                            ))}
+                            {data.benefits.map((benefit, i) => {
+                                const IconComponent = iconMap[benefit.icon];
+                                return (
+                                    <div className={`feature-benefit-card reveal stagger-${(i % 4) + 1}`} key={i}>
+                                        <span className="feature-benefit-icon">
+                                            {IconComponent && <IconComponent size={20} strokeWidth={1.75} />}
+                                        </span>
+                                        <h3 className="feature-benefit-title">{benefit.title}</h3>
+                                        <p className="feature-benefit-desc">{benefit.desc}</p>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </section>
