@@ -123,12 +123,103 @@ export const translations = {
             product: '製品',
             tech: 'テクノロジー',
             connect: 'リンク',
+            legal: '法的情報',
             techItems: [
                 'Powered by Gemini 3.0 Flash',
                 'Google Maps Platform 連携',
                 'Built with React & Vite'
             ],
             copy: 'Trip Guide for ALL. 全ての探検家のために。'
+        },
+        legal: {
+            backToHome: 'トップに戻る',
+            lastUpdated: '最終更新日',
+            privacy: {
+                title: 'プライバシーポリシー',
+                subtitle: 'お客様の情報をどのように収集・使用・保護するかについて説明します。',
+                sections: [
+                    {
+                        title: '収集する情報',
+                        content: '当アプリは以下の情報を収集する場合があります：\n\n• **位置情報**: 周辺のランドマークや観光スポットを特定するために使用します。アプリ使用中のみ収集し、バックグラウンドでの追跡は行いません。\n• **カメラ画像**: ランドマーク・看板・風景の認識のためにリアルタイムで処理されます。画像はデバイス外に保存されません。\n• **利用状況データ**: アプリの改善のため、匿名化された使用統計を収集する場合があります。\n• **デバイス情報**: OS・アプリバージョン・クラッシュレポートなどの技術情報。'
+                    },
+                    {
+                        title: '情報の使用目的',
+                        content: '収集した情報は以下の目的で使用します：\n\n• AIによるランドマーク認識と解説の提供\n• Google Maps連携による周辺情報の表示\n• アプリのパフォーマンス改善とバグ修正\n• ユーザーサポートの提供'
+                    },
+                    {
+                        title: '第三者との情報共有',
+                        content: '当アプリは以下の第三者サービスを利用します：\n\n• **Google Gemini API**: カメラ画像の解析のために使用。Googleのプライバシーポリシーに従って処理されます。\n• **Google Maps Platform**: 位置情報と周辺情報の提供のために使用。\n\nこれら以外の第三者と、お客様の個人情報を販売・共有することはありません。'
+                    },
+                    {
+                        title: 'データの保管と削除',
+                        content: 'カメラで撮影した画像はリアルタイムで処理され、サーバーに保存されません。位置情報はセッション中のみ保持されます。\n\nお客様はいつでもアカウントおよびデータの削除をリクエストできます。削除リクエストは30日以内に処理されます。'
+                    },
+                    {
+                        title: 'お子様のプライバシー',
+                        content: '当アプリは13歳未満のお子様を対象としていません。13歳未満のお子様から意図せず個人情報を収集したことが判明した場合、速やかに削除します。'
+                    },
+                    {
+                        title: 'プライバシーポリシーの変更',
+                        content: '本ポリシーは随時更新される場合があります。重要な変更がある場合はアプリ内でお知らせします。継続してアプリをご利用いただくことで、更新後のポリシーに同意したものとみなします。'
+                    },
+                    {
+                        title: 'お問い合わせ',
+                        content: 'プライバシーに関するご質問は、下記のデータ削除リクエストフォームまたはお問い合わせ窓口までご連絡ください。'
+                    }
+                ],
+                gdpr: {
+                    title: 'データ削除リクエスト (GDPR対応)',
+                    subtitle: 'EU一般データ保護規則（GDPR）およびその他のプライバシー法に基づき、お客様はご自身のデータの削除をリクエストする権利があります。',
+                    nameLabel: 'お名前',
+                    namePlaceholder: '山田 太郎',
+                    emailLabel: 'メールアドレス',
+                    emailPlaceholder: 'example@email.com',
+                    reasonLabel: '削除理由（任意）',
+                    reasonPlaceholder: '削除を希望する理由をお聞かせください（任意）',
+                    submitBtn: '削除リクエストを送信',
+                    successTitle: 'リクエストを受け付けました',
+                    successMsg: '30日以内にご登録のメールアドレスへご連絡いたします。',
+                    note: '※ 削除リクエストの処理には最大30日かかる場合があります。'
+                }
+            },
+            terms: {
+                title: '利用規約',
+                subtitle: 'Trip Guide for ALL をご利用いただく前に、以下の利用規約をお読みください。',
+                sections: [
+                    {
+                        title: 'サービスの利用',
+                        content: 'Trip Guide for ALL（以下「本アプリ」）を利用することで、本利用規約に同意したものとみなします。本アプリは旅行中の情報提供を目的としており、個人的・非商業的な目的にのみご利用いただけます。'
+                    },
+                    {
+                        title: '禁止事項',
+                        content: '以下の行為は禁止されています：\n\n• 本アプリを違法な目的に使用すること\n• 本アプリのリバースエンジニアリング・改変・複製\n• 自動化ツールによる大量アクセス\n• 他のユーザーや第三者の権利を侵害する行為\n• 虚偽の情報を提供すること'
+                    },
+                    {
+                        title: '知的財産権',
+                        content: '本アプリおよびそのコンテンツ（デザイン・テキスト・グラフィックスなど）は、Trip Guide for ALL またはそのライセンサーの知的財産であり、著作権法によって保護されています。'
+                    },
+                    {
+                        title: '免責事項',
+                        content: '本アプリが提供する情報（ランドマーク解説・翻訳・周辺情報など）はAIによって生成されるものであり、正確性を保証するものではありません。\n\n旅行の意思決定において本アプリの情報のみに依存することは避け、公式情報源も合わせてご確認ください。'
+                    },
+                    {
+                        title: '責任の制限',
+                        content: '本アプリの利用に起因するいかなる損害（直接的・間接的・偶発的な損害を含む）について、当社は法律が認める最大限の範囲で責任を負いません。'
+                    },
+                    {
+                        title: 'サービスの変更・終了',
+                        content: '当社は予告なくサービスの内容を変更、または提供を終了する権利を有します。重要な変更については、可能な限り事前にアプリ内でお知らせします。'
+                    },
+                    {
+                        title: '準拠法',
+                        content: '本利用規約は日本法に準拠し、解釈されるものとします。本規約に関する紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。'
+                    },
+                    {
+                        title: 'お問い合わせ',
+                        content: '利用規約に関するご質問・ご意見は、アプリ内のお問い合わせフォームよりご連絡ください。'
+                    }
+                ]
+            }
         }
     },
     en: {
@@ -255,12 +346,103 @@ export const translations = {
             product: 'Product',
             tech: 'Tech Stack',
             connect: 'Connect',
+            legal: 'Legal',
             techItems: [
                 'Powered by Gemini 3.0 Flash',
                 'Google Maps Platform Integration',
                 'Built with React & Vite'
             ],
             copy: 'Trip Guide for ALL. Built for explorers.'
+        },
+        legal: {
+            backToHome: 'Back to Home',
+            lastUpdated: 'Last Updated',
+            privacy: {
+                title: 'Privacy Policy',
+                subtitle: 'This policy explains how we collect, use, and protect your information.',
+                sections: [
+                    {
+                        title: 'Information We Collect',
+                        content: 'Trip Guide for ALL may collect the following types of information:\n\n• **Location Data**: Used to identify nearby landmarks and points of interest. Collected only while the app is in use — no background tracking.\n• **Camera Images**: Processed in real time for landmark, sign, and scene recognition. Images are not stored outside your device.\n• **Usage Data**: Anonymized usage statistics may be collected to improve the app.\n• **Device Information**: Technical data such as OS version, app version, and crash reports.'
+                    },
+                    {
+                        title: 'How We Use Your Information',
+                        content: 'We use collected information to:\n\n• Power AI-based landmark recognition and descriptions\n• Provide nearby information via Google Maps integration\n• Improve app performance and fix bugs\n• Offer user support'
+                    },
+                    {
+                        title: 'Third-Party Services',
+                        content: 'The app uses the following third-party services:\n\n• **Google Gemini API**: Used to analyze camera images. Processed according to Google\'s Privacy Policy.\n• **Google Maps Platform**: Used to provide location and nearby information.\n\nWe do not sell or share your personal information with any other third parties.'
+                    },
+                    {
+                        title: 'Data Storage & Deletion',
+                        content: 'Images captured by the camera are processed in real time and not stored on our servers. Location data is retained only for the duration of your session.\n\nYou may request deletion of your data at any time. Deletion requests will be processed within 30 days.'
+                    },
+                    {
+                        title: "Children's Privacy",
+                        content: 'This app is not intended for children under the age of 13. If we become aware that we have inadvertently collected personal information from a child under 13, we will delete it promptly.'
+                    },
+                    {
+                        title: 'Changes to This Policy',
+                        content: 'This policy may be updated from time to time. We will notify you of significant changes within the app. Continued use of the app after changes constitutes your acceptance of the updated policy.'
+                    },
+                    {
+                        title: 'Contact Us',
+                        content: 'For privacy-related questions, please use the data deletion request form below or reach out through our in-app contact channel.'
+                    }
+                ],
+                gdpr: {
+                    title: 'Data Deletion Request (GDPR)',
+                    subtitle: 'Under the EU General Data Protection Regulation (GDPR) and other applicable privacy laws, you have the right to request deletion of your personal data.',
+                    nameLabel: 'Your Name',
+                    namePlaceholder: 'Jane Doe',
+                    emailLabel: 'Email Address',
+                    emailPlaceholder: 'example@email.com',
+                    reasonLabel: 'Reason for Deletion (Optional)',
+                    reasonPlaceholder: 'Please share why you would like your data deleted (optional)',
+                    submitBtn: 'Submit Deletion Request',
+                    successTitle: 'Request Received',
+                    successMsg: 'We will contact you at the email address provided within 30 days.',
+                    note: '* Processing your deletion request may take up to 30 days.'
+                }
+            },
+            terms: {
+                title: 'Terms of Service',
+                subtitle: 'Please read these Terms of Service carefully before using Trip Guide for ALL.',
+                sections: [
+                    {
+                        title: 'Use of the Service',
+                        content: 'By using Trip Guide for ALL (the "App"), you agree to these Terms of Service. The App is intended for travel information purposes and may only be used for personal, non-commercial use.'
+                    },
+                    {
+                        title: 'Prohibited Activities',
+                        content: 'The following activities are prohibited:\n\n• Using the App for any unlawful purpose\n• Reverse engineering, modifying, or copying the App\n• Automated bulk access using bots or scripts\n• Violating the rights of other users or third parties\n• Providing false or misleading information'
+                    },
+                    {
+                        title: 'Intellectual Property',
+                        content: 'The App and its content (design, text, graphics, etc.) are the intellectual property of Trip Guide for ALL or its licensors and are protected by copyright law.'
+                    },
+                    {
+                        title: 'Disclaimer',
+                        content: 'Information provided by the App — including landmark descriptions, translations, and local recommendations — is AI-generated and not guaranteed to be accurate.\n\nDo not rely solely on App-provided information for travel decisions. Always verify with official sources.'
+                    },
+                    {
+                        title: 'Limitation of Liability',
+                        content: 'To the maximum extent permitted by law, we are not liable for any damages (including direct, indirect, or incidental damages) arising from your use of the App.'
+                    },
+                    {
+                        title: 'Changes to the Service',
+                        content: 'We reserve the right to modify or discontinue the App at any time without prior notice. Where possible, we will notify users of significant changes within the App in advance.'
+                    },
+                    {
+                        title: 'Governing Law',
+                        content: 'These Terms are governed by and construed in accordance with the laws of Japan. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the Tokyo District Court.'
+                    },
+                    {
+                        title: 'Contact',
+                        content: 'For questions or feedback regarding these Terms, please use the in-app contact form.'
+                    }
+                ]
+            }
         }
     }
 };

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLanguage } from '../context/LanguageContext';
@@ -32,6 +33,14 @@ function Footer() {
                         {t.footer.techItems.map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
+                    </ul>
+                </div>
+
+                <div className="footer-col">
+                    <h4 className="footer-title">{t.footer.legal}</h4>
+                    <ul className="footer-links">
+                        <li><Link to="/privacy">{t.legal.privacy.title}</Link></li>
+                        <li><Link to="/terms">{t.legal.terms.title}</Link></li>
                     </ul>
                 </div>
 

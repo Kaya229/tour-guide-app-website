@@ -7,6 +7,9 @@ import Footer from './components/Footer';
 import VisionPage from './pages/VisionPage';
 import AudioPage from './pages/AudioPage';
 import ChatPage from './pages/ChatPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
+import ConsentBanner from './components/ConsentBanner';
 import { LanguageProvider } from './context/LanguageContext';
 import './App.css';
 
@@ -28,11 +31,14 @@ function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
+        <ConsentBanner />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/features/vision" element={<VisionPage />} />
           <Route path="/features/audio" element={<AudioPage />} />
           <Route path="/features/chat" element={<ChatPage />} />
+          <Route path="/privacy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms" element={<TermsOfServicePage />} />
         </Routes>
       </BrowserRouter>
     </LanguageProvider>
